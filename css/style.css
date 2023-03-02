@@ -55,7 +55,9 @@ body{
 #exercise1 #check-btn{
     background-color: transparent;
     color: black;
+
     padding: 4px;
+
     border: 1px solid black;
     border-radius: 10px;
 
@@ -71,3 +73,52 @@ body{
 
     padding-top: 10px;
 }
+
+
+
+
+#exercise2{
+    width: 800px;
+    height: 300px;
+    margin: 50px auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(255, 255, 255, 0.354) ;
+    border-radius: 10px;
+
+    padding: 20px 0;
+}
+
+#exercise2 #user-number{
+    width: 80px;
+    height: 25px;
+    padding: 2px;
+}
+
+#exercise2 button{
+    background-color: transparent;
+    color: black;
+
+    padding: 4px;
+    margin-top: 10px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#exercise2 button:hover{
+    border: 1px solid rgb(255, 128, 0);
+    color: rgb(255, 128, 0);
+}
+
+
+#exercise2 #even-odd-output{
+    height: 1em;
+
+    padding-top: 10px;
+}
+

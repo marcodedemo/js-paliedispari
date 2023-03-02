@@ -31,17 +31,7 @@ checkButtonElement.addEventListener("click", isWordPalindrome);
 
 
 
-
-
-
-
-
-
-
-
-
-
-/* -------------------------------------  functions  ------------------------------------- */
+/* -------------------------------------  function  ------------------------------------- */
 
 // palindrome word function
 function isWordPalindrome(){
@@ -91,3 +81,88 @@ function isWordPalindrome(){
 
 
 
+
+
+// chiedo all'utente di scegliere tra pari e dispari e di inserire un numero da 1 a 5
+// genero un numero randomico da 1 a 5 per il computer
+// sommo i due numeri
+// stabilisco se la somma dei due numeri è pari o dispari e decreto il vincitore 
+
+
+let evenButtonElement = document.getElementById("even-btn");
+let oddButtonElement = document.getElementById("odd-btn");
+let userNumberElement = document.getElementById("user-number");
+let outputElement = document.getElementById("even-odd-output")
+
+
+
+
+evenButtonElement.addEventListener("click", isEven);
+
+oddButtonElement.addEventListener("click", isOdd);
+
+
+
+
+// computer random number generator
+function generateRandom(min, max){
+
+    return Math.floor(Math.random() * (max - min + 1) + min)
+
+}
+
+// even check function
+function isEven(){
+
+    if(userNumberElement.value > 0 && userNumberElement.value < 6){
+
+        let randomComputerNumber = generateRandom(1,5);
+        
+        if((parseInt(userNumberElement.value) + randomComputerNumber) % 2 == 0){
+
+            outputElement.innerText = ("hai scelto pari e il numero " + userNumberElement.value + ", il numero generato dal computer è " + randomComputerNumber + ", il risultato è pari quindi hai vinto");
+
+            outputElement.style.color = "green";
+
+        }else{
+
+            outputElement.innerText = ("hai scelto pari e il numero " + userNumberElement.value + ", il numero generato dal computer è " + randomComputerNumber + ", il risultato è dispari quindi hai perso");
+
+            outputElement.style.color = "red";
+
+        }
+
+    }else{
+
+        outputElement.innerText = ("inserisci un valore compreso tra 1 e 5");
+        outputElement.style.color = "black";
+    }
+}
+
+// odd check function
+function isOdd(){
+
+    if(userNumberElement.value >= 1 && userNumberElement.value <= 5){
+
+        let randomComputerNumber = generateRandom(1,5);
+        
+        if((parseInt(userNumberElement.value) + randomComputerNumber) % 2 !== 0){
+
+            outputElement.innerText = ("hai scelto dispari e il numero " + userNumberElement.value + ", il numero generato dal computer è " + randomComputerNumber + ", il risultato è dispari quindi hai vinto");
+
+            outputElement.style.color = "green";
+
+        }else{
+
+            outputElement.innerText = ("hai scelto dispari e il numero " + userNumberElement.value + ", il numero generato dal computer è " + randomComputerNumber + ", il risultato è pari quindi hai perso");
+
+            outputElement.style.color = "red";
+
+        }
+
+    }else{
+
+        outputElement.innerText = ("inserisci un valore compreso tra 1 e 5");
+        outputElement.style.color = "black";
+    }
+}
