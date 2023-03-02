@@ -5,3 +5,69 @@
 }
 
 
+body{
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #adb5bd;
+}
+
+
+
+
+/* exercise 1  */
+#exercise1 {
+    width: 800px;
+    height: 300px;
+    margin: 50px auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(255, 255, 255, 0.354) ;
+    border-radius: 10px;
+
+    padding: 20px 0;
+
+
+}
+
+#exercise1 h1{
+    padding-bottom: 30px;
+}
+
+#exercise1 #word-input{
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+    border-radius: 10px;
+
+    padding: 4px;
+    width: 200px;
+}
+
+#exercise1 #word-input::placeholder{
+    color: rgba(0, 0, 0, 0.606);
+}
+
+#exercise1 #check-btn{
+    background-color: transparent;
+    color: black;
+    padding: 4px;
+    border: 1px solid black;
+    border-radius: 10px;
+
+}
+
+#exercise1 #check-btn:hover{
+    border: 1px solid rgb(255, 128, 0);
+    color: rgb(255, 128, 0);
+}
+
+#exercise1 #output-text{
+    height: 1em;
+
+    padding-top: 10px;
+}
