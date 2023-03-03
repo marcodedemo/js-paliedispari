@@ -24,7 +24,7 @@ let checkButtonElement = document.getElementById("check-btn");
 let outputTextElement = document.getElementById("output-text");
 
 // variabile sentinella
-let palindromeCheckIndex;
+let palindromeCheckIndex = true;
 
 // click action
 checkButtonElement.addEventListener("click", isWordPalindrome);
@@ -36,7 +36,7 @@ checkButtonElement.addEventListener("click", isWordPalindrome);
 // palindrome word function
 function isWordPalindrome(){
 
-    
+    palindromeCheckIndex = true;
     
     if(!isNaN(inputElement.value) || inputElement.value == "" || inputElement.value == null || inputElement.value.length < 3){
 
@@ -46,18 +46,16 @@ function isWordPalindrome(){
     }else{
 
         // ciclo di crontrollo lettere
-        for (let i = 0; i < (inputElement.value.length / 2); i++) {
+        for (let i = 0; i < (inputElement.value.length); i++) {
             
             // se la prima lettera è uguale all'ultima imposto la variabile sentinella a true e procedo con il controllo delle lettere successive
             if(inputElement.value[i] == inputElement.value[inputElement.value.length - 1 - i]){
     
-                palindromeCheckIndex = true;
     
             // altrimenti imposto la variabile sentinella a falso
             }else{
     
                 palindromeCheckIndex = false;
-                break;
             }
         }
     
