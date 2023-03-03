@@ -46,7 +46,7 @@ function isWordPalindrome(){
     }else{
 
         // ciclo di crontrollo lettere
-        for (let i = 0; i < inputElement.value.length; i++) {
+        for (let i = 0; i < (inputElement.value.length / 2); i++) {
             
             // se la prima lettera è uguale all'ultima imposto la variabile sentinella a true e procedo con il controllo delle lettere successive
             if(inputElement.value[i] == inputElement.value[inputElement.value.length - 1 - i]){
@@ -57,6 +57,7 @@ function isWordPalindrome(){
             }else{
     
                 palindromeCheckIndex = false;
+                break;
             }
         }
     
@@ -73,6 +74,8 @@ function isWordPalindrome(){
     
             // stampo "la parola che hai inserito non è palindroma"
             outputTextElement.innerText = "La parola che hai inserito non è palindroma";
+            outputTextElement.style.color = "red" ;
+
     
         }
     }
@@ -107,7 +110,7 @@ oddButtonElement.addEventListener("click", isOdd);
 // computer random number generator
 function generateRandom(min, max){
 
-    return Math.floor(Math.random() * (max - min + 1) + min)
+    return Math.floor(Math.random() * (max - min + 1) + min);
 
 }
 
